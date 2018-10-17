@@ -1,0 +1,42 @@
+.wrapper  {
+    display: grid;
+    
+}
+
+.headshot {
+    display: grid;
+}
+
+#navbarContainer {
+    grid-area: navbarContainer;
+}
+
+#dynamicContent {
+    grid-area: dynamicContent;
+    grid-template-areas: 
+    "pageContainer",
+    "headshotContainer",
+    "footerContainer";
+    border: 2px solid black;
+}
+
+#pageContainer {
+    grid-area: pageContainer;
+    
+}
+
+#text {
+    grid-area: pageText;
+    width: 600px;
+    height: 600px;
+    border: 1px solid black;
+}
+
+#headshotContainer {
+    grid-area: headshotContainer;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#footerContainer {
+    grid-area: footerContainer;
+}
