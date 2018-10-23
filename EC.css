@@ -63,7 +63,7 @@ li.right {
 }
 
 #dynamicContent {
-    margin-top: 50px;
+    margin-top: 0px;
     grid-area: dynamicContent;
     grid-row-gap: 50px;
     grid-template-areas: "pageContainer" "headshotContainer" "footerContainer";
@@ -75,7 +75,7 @@ li.right {
     grid-template-areas: "pageText pageText pageText windowSpace windowSpace";
     width: 100%;
     height: 600px;
-    border: 2px dotted red;
+    border: none;/*2px dotted red;*/
 }
 
 #text {
@@ -83,16 +83,19 @@ li.right {
     border: 2px dashed grey;
     padding: 10px;
     margin: 10px;
-
+    max-width: 50%;
 }
 
 #windowSpace {
     grid-area: windowSpace;
     background-image: url(logo.jpg);
     background-repeat: no-repeat;
-    margin-top: 20px;
-    margin-right: 20px;
-    width: 100%;
+    background-size: contain;
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    left: 65%;
+    top: 20%;
 }
 
 #headshotContainer {
@@ -119,4 +122,71 @@ li.right {
 }
 
 @media only screen and (max-width : 320px) { /*smartphone Vertical*/
+}
+
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.layer {
+    background-color: rgba(0,0,0,0.4);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: none;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+#sidenavButton {
+    position: relative;
+    top: 0px;
+    background-color: rgba(153, 153, 153, 0.72);
+    width: 180px;
+    border-radius: 5px;
 }

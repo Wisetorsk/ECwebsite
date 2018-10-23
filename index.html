@@ -3,40 +3,46 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="EC.css"/>
-
+        <script src="script.js"></script>
     </head>
     <body>
-        <div id="navbarContainer" class="fixed top wrapper">
-            <ul id="navbar">
-                <li><a href="">Home</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Products</a></li>
-                <li class="right"><a href="">Contact</a></li>
-            </ul>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">Om oss</a>
+            <a href="#headshotContainer">Ansatte</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
         </div>
-        <div class="wrapper" id="dynamicContent">
-            <div class="wrapper" id="pageContainer">
-                <div class="text" id="text">PageText</div>
-                <div class="see-thru" id="windowSpace"></div>
+        <div class="layer" id="layer"></div>
+        <div id="main">
+            <div id="sidenavButton"><span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Navigation</span></div>
+            <div id="navbarContainer" class="fixed top wrapper">
+
             </div>
-
-            <div class="wrapper" id="headshotContainer">
-                <div class="headshot" id="headshot1">
-                    <div class="image" id="headshotImage1">HEADSHOT</div>
-                    <div class="text" id="headshotText1">ContactInfo</div>
+            <div class="wrapper" id="dynamicContent">
+                <div class="wrapper" id="pageContainer">
+                    <div class="text" id="text">"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."</div>
+                    <div class="see-thru" id="windowSpace"></div>
                 </div>
 
-                <div class="headshot" id="headshot2">
-                    <div class="image" id="headshotImage2">HEADSHOT</div>
-                    <div class="text" id="headshotText2">ContactInfo</div>
-                </div>
+                <div class="wrapper" id="headshotContainer">
+                    <div class="headshot" id="headshot1">
+                        <div class="image" id="headshotImage1">HEADSHOT</div>
+                        <div class="text" id="headshotText1">ContactInfo</div>
+                    </div>
 
-                <div class="headshot" id="headshot3">
-                    <div class="image" id="headshotImage3">HEADSHOT</div>
-                    <div class="text" id="headshotText3">ContactInfo</div>
+                    <div class="headshot" id="headshot2">
+                        <div class="image" id="headshotImage2">HEADSHOT</div>
+                        <div class="text" id="headshotText2">ContactInfo</div>
+                    </div>
+
+                    <div class="headshot" id="headshot3">
+                        <div class="image" id="headshotImage3">HEADSHOT</div>
+                        <div class="text" id="headshotText3">ContactInfo</div>
+                    </div>
                 </div>
+                <div class="wrapper" id="footerContainer">FOOTER</div>
             </div>
-            <div class="wrapper" id="footerContainer">FOOTER</div>
         </div>
     </body>
 </html>
